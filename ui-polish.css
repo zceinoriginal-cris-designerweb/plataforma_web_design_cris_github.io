@@ -1,0 +1,288 @@
+.artcraft-glow {
+  border-color: rgba(41, 71, 140, .12);
+  box-shadow: 0 2px 6px rgba(24, 38, 66, .045);
+  transition: transform .24s cubic-bezier(.2, .8, .2, 1), box-shadow .24s ease, border-color .24s ease;
+}
+
+.artcraft-glow:focus-within {
+  border-color: rgba(235, 155, 69, .72);
+  box-shadow: 0 0 0 3px rgba(235, 155, 69, .12), 0 12px 28px rgba(41, 71, 140, .12);
+}
+
+@media (hover: hover) {
+  .artcraft-glow:hover {
+    transform: translateY(-3px);
+    border-color: rgba(235, 155, 69, .72);
+    box-shadow: 0 14px 28px rgba(41, 71, 140, .13);
+  }
+}
+
+@media (max-width: 640px) {
+  .ai-btn-glow {
+    animation: none;
+  }
+}
+
+.dark .artcraft-glow:focus-within {
+  border-color: rgba(251, 191, 36, .72);
+  box-shadow: 0 0 0 3px rgba(251, 191, 36, .12), 0 12px 28px rgba(0, 0, 0, .2);
+}
+
+#toggleSidebarBtn,
+#themeToggleBtn,
+#notificationsButton {
+  min-width: 2.5rem;
+  min-height: 2.5rem;
+}
+
+.ai-btn-glow {
+  min-width: 2.75rem;
+  min-height: 2.75rem;
+  justify-content: center;
+}
+
+.nav-item,
+.repository-tab {
+  min-height: 2.75rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .artcraft-glow {
+    transition: none;
+  }
+
+  .artcraft-glow:hover {
+    transform: none;
+  }
+}
+
+#studentResourceCatalog {
+  position: relative;
+  overflow: hidden;
+  border-color: rgba(41, 71, 140, .14);
+  background-image: radial-gradient(ellipse at 100% 0, rgba(56, 189, 248, .1), transparent 38%);
+  box-shadow: 0 12px 32px rgba(24, 38, 66, .06);
+}
+
+.dark #studentResourceCatalog {
+  border-color: rgba(148, 163, 184, .2);
+  background-image: radial-gradient(ellipse at 100% 0, rgba(56, 189, 248, .09), transparent 38%);
+}
+
+.resource-catalog-heading {
+  display: flex;
+  flex-direction: column;
+  gap: .875rem;
+}
+
+.resource-catalog-icon {
+  display: grid;
+  width: 3rem;
+  height: 3rem;
+  flex: 0 0 3rem;
+  place-items: center;
+  border: 1px solid rgba(41, 71, 140, .12);
+  border-radius: 1rem;
+  background: #eff6ff;
+  color: #29478c;
+  box-shadow: 0 5px 12px rgba(41, 71, 140, .1);
+}
+
+.resource-catalog-icon svg {
+  width: 1.375rem;
+  height: 1.375rem;
+}
+
+.resource-catalog-count {
+  align-self: flex-start;
+  padding: .4rem .7rem;
+  border: 1px solid rgba(41, 71, 140, .12);
+  border-radius: 999px;
+  background: #f0f3fa;
+  color: #29478c;
+  font-size: .6875rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.dark .resource-catalog-icon {
+  border-color: rgba(251, 191, 36, .18);
+  background: rgba(251, 191, 36, .1);
+  color: #fbbf24;
+}
+
+.dark .resource-catalog-count {
+  border-color: rgba(251, 191, 36, .2);
+  background: rgba(251, 191, 36, .1);
+  color: #fde68a;
+}
+
+#studentResourceGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
+  gap: .875rem;
+}
+
+#studentResourceGrid > a {
+  position: relative;
+  display: grid;
+  min-width: 0;
+  min-height: 7.5rem;
+  grid-template-columns: 3.25rem minmax(0, 1fr);
+  align-items: start;
+  gap: .875rem;
+  overflow: hidden;
+  padding: 1rem 1rem 2.8rem;
+  border-color: #e2e8f0;
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, .88);
+  box-shadow: 0 2px 8px rgba(24, 38, 66, .035);
+  text-decoration: none;
+  transition: transform .22s ease, border-color .22s ease, box-shadow .22s ease, background-color .22s ease;
+}
+
+.dark #studentResourceGrid > a {
+  border-color: #334155;
+  background: rgba(15, 23, 42, .72);
+}
+
+#studentResourceGrid > a > svg {
+  display: block;
+  width: 3.25rem !important;
+  height: 3.25rem !important;
+  flex: 0 0 3.25rem;
+  margin: 0;
+  padding: .75rem;
+  border: 1px solid currentColor;
+  border-color: color-mix(in srgb, currentColor 14%, transparent);
+  border-radius: 1rem;
+  background: rgba(41, 71, 140, .08);
+  background: color-mix(in srgb, currentColor 9%, white);
+  stroke-width: 1.8;
+}
+
+#studentResourceGrid > a:nth-child(1) > svg { color: #0369a1; }
+#studentResourceGrid > a:nth-child(2) > svg { color: #4f46e5; }
+#studentResourceGrid > a:nth-child(3) > svg { color: #2563eb; }
+#studentResourceGrid > a:nth-child(4) > svg { color: #e11d48; }
+#studentResourceGrid > a:nth-child(5) > svg { color: #d97706; }
+#studentResourceGrid > a:nth-child(6) > svg { color: #65a30d; }
+#studentResourceGrid > a:nth-child(7) > svg { color: #ea580c; }
+.dark #studentResourceGrid > a > svg {
+  background: rgba(148, 163, 184, .12);
+  background: color-mix(in srgb, currentColor 16%, #0f172a);
+}
+
+#studentResourceGrid > a > span {
+  min-width: 0;
+  align-self: center;
+  overflow-wrap: anywhere;
+}
+
+#studentResourceGrid > a strong {
+  font-size: .8125rem;
+  line-height: 1.45;
+}
+
+#studentResourceGrid > a > span > span {
+  font-size: .6875rem;
+  line-height: 1.55;
+}
+
+#studentResourceGrid > a::after {
+  position: absolute;
+  right: 1rem;
+  bottom: .75rem;
+  padding: .3rem .6rem;
+  border-radius: 999px;
+  background: #f0f3fa;
+  color: #29478c;
+  content: "Explorar recurso";
+  font-size: .625rem;
+  font-weight: 700;
+  transition: background-color .2s ease, color .2s ease;
+}
+
+.dark #studentResourceGrid > a::after {
+  background: #1e293b;
+  color: #cbd5e1;
+}
+
+#studentResourceGrid > a:focus-visible {
+  outline: 3px solid #eb9b45;
+  outline-offset: 3px;
+}
+
+@media (hover: hover) {
+  #studentResourceGrid > a:hover {
+    transform: translateY(-3px);
+    border-color: #93c5fd;
+    background-color: #f8fbff;
+    box-shadow: 0 12px 22px rgba(41, 71, 140, .1);
+  }
+
+  #studentResourceGrid > a:hover::after {
+    background: #29478c;
+    color: white;
+  }
+}
+
+@media (min-width: 640px) {
+  .resource-catalog-heading {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .resource-catalog-count {
+    align-self: center;
+  }
+}
+
+@media (max-width: 320px) {
+  header {
+    padding-right: .5rem !important;
+    padding-left: .5rem !important;
+  }
+
+  header > .flex.items-center.gap-3 {
+    gap: .5rem;
+  }
+
+  header > .flex.items-center.gap-2 {
+    gap: .25rem;
+  }
+
+  #themeToggleBtn,
+  #notificationsButton {
+    min-width: 2.25rem;
+    min-height: 2.25rem;
+  }
+}
+
+@media (max-width: 360px) {
+  #studentResourceGrid > a {
+    grid-template-columns: 3rem minmax(0, 1fr);
+    gap: .75rem;
+    padding-right: .75rem;
+    padding-left: .75rem;
+  }
+
+  #studentResourceGrid > a > svg {
+    width: 3rem !important;
+    height: 3rem !important;
+    flex-basis: 3rem;
+    padding: .625rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #studentResourceGrid > a,
+  #studentResourceGrid > a::after {
+    transition: none;
+  }
+
+  #studentResourceGrid > a:hover {
+    transform: none;
+  }
+}
